@@ -212,7 +212,7 @@ class MaibCheckoutApiRequest {
      */
     async paymentRefund(paymentId, refundData, authToken) {
         const endpoint = MaibCheckoutApiRequest._buildEndpoint(API_ENDPOINTS.PAYMENTS_REFUND, { paymentId });
-        return this._executeOperation(endpoint, authToken, refundData);
+        return this._executeOperation(endpoint, authToken, refundData, REQUIRED_PARAMS.PAYMENTS_REFUND_PARAMS);
     }
     //#endregion
 
