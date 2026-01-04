@@ -59,7 +59,7 @@ class MaibCheckoutApiRequest {
      * @param {string} method - Request HTTP method
      * @param {Object} params - Request params
      */
-    async _executeOperation(endpoint, authToken, data=null, requiredParams=null, method='POST', params=null) {
+    async _executeOperation(endpoint, authToken, data = null, requiredParams = null, method = 'POST', params = null) {
         MaibCheckoutApiRequest._validateAccessToken(authToken);
         MaibCheckoutApiRequest._validateParams(data, requiredParams);
 
