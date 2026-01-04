@@ -3,9 +3,10 @@
 name: Publish Package
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_dispatch:
+  # push:
+  #   tags:
+  #     - 'v*'
 
 permissions:
   id-token: write  # Required for OIDC
