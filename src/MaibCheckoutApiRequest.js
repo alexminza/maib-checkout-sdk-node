@@ -161,9 +161,9 @@ class MaibCheckoutApiRequest {
      * @returns {Promise<Object>} - Checkout session details
      * @link https://docs.maibmerchants.md/checkout/api-reference/endpoints/get-checkout-details
      */
-    async checkoutDetails(checkoutId, token) {
+    async checkoutDetails(checkoutId, authToken) {
         const endpoint = MaibCheckoutApiRequest._buildEndpoint(API_ENDPOINTS.CHECKOUTS_DETAILS, { checkoutId });
-        return this._executeOperation(endpoint, token, null, null, 'GET');
+        return this._executeOperation(endpoint, authToken, null, null, 'GET');
     }
 
     /**

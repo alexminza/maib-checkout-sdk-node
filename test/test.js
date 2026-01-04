@@ -60,7 +60,7 @@ async function testCheckoutRegister() {
         'orderInfo': {
             'id': 'EK123123BV',
             'description': 'Order description',
-            'date': '2025-11-03T09:28:40.814748+00:00',
+            'date': new Date(Date.now()).toISOString(),
             'orderAmount': null,
             'orderCurrency': null,
             'deliveryAmount': null,
