@@ -134,7 +134,7 @@ async function testCheckoutCancel() {
 }
 
 async function testCheckoutList() {
-    console.log('Running: testQrList');
+    console.log('Running: testCheckoutList');
 
     const checkoutListParams = {
         'count': 10,
