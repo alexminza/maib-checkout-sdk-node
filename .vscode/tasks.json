@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "npm: update",
+            "type": "shell",
+            "command": "npm",
+            "args": [
+                "update"
+            ],
+            "problemMatcher": [],
+        },
+        {
+            "label": "npm: lint",
+            "type": "npm",
+            "script": "lint",
+            "problemMatcher": [
+                "$eslint-stylish"
+            ],
+            "detail": "eslint src/ test/"
+        },
+        {
+            "label": "npm: publish",
+            "type": "shell",
+            "command": "npm",
+            "args": [
+                "publish"
+            ],
+            "problemMatcher": [],
+            "detail": "Publish the package to the npm registry"
+        }
+    ]
+}
