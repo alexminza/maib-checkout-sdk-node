@@ -96,11 +96,11 @@ class MaibCheckoutApiRequest {
 
     /**
      * Validates the access token
-     * @param {string} token - Access token
+     * @param {string} authToken - Access token
      * @throws {MaibCheckoutValidationError} - If Access token parameter is invalid
      */
-    static _validateAccessToken(token) {
-        if (!token) {
+    static _validateAccessToken(authToken) {
+        if (!authToken) {
             throw new MaibCheckoutValidationError('Access token is required');
         }
     }
@@ -199,6 +199,7 @@ class MaibCheckoutApiRequest {
      * @returns {Promise<Object>} - Retrieval response
      */
     async paymentList(paymentListParams, authToken) {
+        MaibCheckoutApiRequest._validateParams(paymentListParams, REQUIRED_PARAMS.PAYMENT_LIST_PARAMS);
         return this._executeOperation(API_ENDPOINTS.PAYMENTS, authToken, null, null, 'GET', paymentListParams);
     }
 

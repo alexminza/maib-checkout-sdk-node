@@ -28,9 +28,11 @@ const API_ENDPOINTS = {
 
 const REQUIRED_PARAMS = {
     // https://docs.maibmerchants.md/checkout/api-reference/endpoints/register-a-new-hosted-checkout-session#request
-    CHECKOUT_PARAMS: ['amount', 'currency', 'orderInfo', 'callbackUrl'],
+    CHECKOUT_PARAMS: ['amount', 'currency'],
     // https://docs.maibmerchants.md/checkout/api-reference/endpoints/refund-a-payment#request
-    PAYMENTS_REFUND_PARAMS: ['amount', 'reason'],
+    PAYMENTS_REFUND_PARAMS: [],
+    // https://docs.maibmerchants.md/checkout/api-reference/endpoints/retrieve-all-payments-by-filter#query-parameters
+    PAYMENT_LIST_PARAMS: ['count', 'offset'],
     // https://docs.maibmerchants.md/mia-qr-api/en/payment-simulation-sandbox#request-parameters-body-json
     MIA_TEST_PAY_PARAMS: ['qrId', 'amount', 'iban', 'currency', 'payerName'],
 }
