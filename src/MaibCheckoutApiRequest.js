@@ -199,6 +199,7 @@ class MaibCheckoutApiRequest {
      * @returns {Promise<Object>} - Retrieval response
      */
     async paymentList(paymentListParams, authToken) {
+        MaibCheckoutApiRequest._validateParams(paymentListParams, REQUIRED_PARAMS.PAYMENT_LIST_PARAMS);
         return this._executeOperation(API_ENDPOINTS.PAYMENTS, authToken, null, null, 'GET', paymentListParams);
     }
 
