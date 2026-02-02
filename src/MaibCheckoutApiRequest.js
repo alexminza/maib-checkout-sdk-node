@@ -96,11 +96,11 @@ class MaibCheckoutApiRequest {
 
     /**
      * Validates the access token
-     * @param {string} token - Access token
+     * @param {string} authToken - Access token
      * @throws {MaibCheckoutValidationError} - If Access token parameter is invalid
      */
-    static _validateAccessToken(token) {
-        if (!token) {
+    static _validateAccessToken(authToken) {
+        if (!authToken) {
             throw new MaibCheckoutValidationError('Access token is required');
         }
     }
