@@ -1,4 +1,8 @@
-**/.DS_Store
+.DS_Store
+
+# Tests
+/test/*
+!/test/*.js
 
 # Logs
 logs
